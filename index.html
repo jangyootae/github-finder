@@ -4,8 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>github finder</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+    <div id="header"><span>GitHub Finder</span></div>
+    <div id="search_tab">
+        <b style="font-size: 2.5rem; ">Search GitHub Users</b>
+        <p style="font-size: 1.5rem; color: #8B939A">Enter a username to fetch a user profile and repos</p>
+        <input type="text" id="username" placeholder="GitHub 사용자명을 입력하세요">
+    </div>
+    <div id="profile_tab">
+
+        <div id="profile">
+            <div id="profile-left">
+                <div id="profileImage" class="profile-image"></div>
+                <button id="View_Profile">View Profile</button>
+            </div>
+            <div id="profile-right">
+                <div id="profile_git">
+                    <div id="publicRepos" class="profile-box"></div>
+                    <div id="publicGists" class="profile-box"></div>
+                    <div id="followers" class="profile-box"></div>
+                    <div id="following" class="profile-box"></div>
+                </div>
+                <div id="profile_info">
+                    <div id="company" class="profile-line"></div>
+                    <div id="website" class="profile-line"></div>
+                    <div id="location" class="profile-line"></div>
+                    <div id="memberSince" class="profile-line"></div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <!-- <div id="jandi">
+        <div id="jandi_img"></div>
+    </div> -->
+    <span style="font-size: 3rem;margin: 0px 20px;">Latest Repos</span>
+    <div id="latest_repos">
+        <div id="latest_repo">
+        </div>
+    </div>
+    <footer>
+        <div>
+            <span>GitHub Finder</span>
+        </div>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
