@@ -16,8 +16,6 @@ class GitHubFinder {
             }
         });
     }
-
-    // displayProfile 메서드에 다음 코드를 추가합니다.
     displayProfile(user) {
         document.getElementById('profileImage').innerHTML = `<img src="${user.avatar_url}" alt="${user.login}" width="250px ">`;
 
@@ -43,14 +41,11 @@ class GitHubFinder {
         this.displayLatestRepos(user.login);
     }
 
-    // 새로운 메서드를 추가합니다.
     async displayLatestRepos(username) {
-        // 먼저 이전의 Latest Repos를 지웁니다.
         this.latestReposContainer.innerHTML = '';
 
         try {
             const repos = await this.fetchLatestRepos(username);
-            // 새로운 Latest Repos를 표시합니다.
             repos.slice(0, 5).forEach(repo => {
                 const repoDiv = document.createElement('div');
                 repoDiv.className = 'repo-item';
@@ -97,15 +92,12 @@ class GitHubFinder {
     }
     // async jandiDiv() {
     //     try {
-    //         // 이미지를 표시할 컨테이너
     //         const jandiContainer = document.getElementById('jandi_img');
     
-    //         // 이미지 엘리먼트 생성
     //         const jandiImage = document.createElement('img');
     //         jandiImage.src = `https://ghchart.rshah.org/${username}`;
     //         jandiImage.alt = 'GitHub Contribution Chart';
     
-    //         // 이미지를 컨테이너에 추가
     //         jandiContainer.innerHTML = '';
     //         jandiContainer.appendChild(jandiImage);
     //     } catch (error) {
